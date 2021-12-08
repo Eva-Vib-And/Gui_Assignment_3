@@ -1,5 +1,5 @@
 <template>
-  <div v-show="showAddModel">
+  <div v-show="showAddModel"/>
   <AddModel @add-model="addModel"/>
 </template>
 
