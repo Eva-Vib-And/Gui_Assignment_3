@@ -3,6 +3,7 @@ import ManagerSide from '@/views/ManagerSide'
 import ModelSide from '@/views/ModelSide'
 import Home from '@/views/Home'
 
+
 const routes = [
     {
         path: '/',
@@ -18,7 +19,7 @@ const routes = [
         path: '/modelside',
         name:'ModelSide',
         component: ModelSide
-    }
+    },
 ]
 
 const router = createRouter({

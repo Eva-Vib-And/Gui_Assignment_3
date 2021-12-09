@@ -1,4 +1,50 @@
 <template>
-    <h3>You are at managerside</h3>
-    <router-link to="/">Go Back</router-link>
+<!-- Page content -->
+<div class="main">
+ <h3>You are at managerside</h3>
+    
+</div>
+    <!-- Side navigation -->
+<div class="sidenav">
+  <a router-link to="">Add Model</a>
+   <a router-link to="">Add Manager</a>
+    <a router-link to="">Add New Job</a>
+  <a router-link to="">Add Model to Job</a>
+    <a router-link to="">Delete model from Jobs</a>
+</div>
 </template>
+
+<style scope>
+/* The sidebar menu */
+.sidenav {
+    margin-top: 2.5cm;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 180px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #4d4d4d; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  
+}
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+ margin-left: 5cm;
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding-left: 30px;
+}
+</style>

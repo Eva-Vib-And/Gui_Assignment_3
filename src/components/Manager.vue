@@ -1,11 +1,6 @@
 <template>
     <h1>Manager side with a managers job:</h1>
-    <h3>Add model</h3> <!--- This should be a link----> 
-    <h3>Add Manager</h3> <!--- This should be a link--->
-    <h3>Add Jobs</h3> <!--- This should be a link---->
-    <label>Add model to Jobs</label>
-
-    <h3>Delete model from Jobs</h3>
+    
 </template>
 
 <script>

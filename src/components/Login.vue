@@ -1,4 +1,5 @@
 <template>
+<div class="container">
      <form @submit="onSubmit" class="add-form">
     <div class="form-control">
       <label>Email</label>
@@ -14,8 +15,10 @@
       />
     </div>
     
+    
     <input type="submit" value="Login" class="btn btn-block" />
   </form>
+  </div>
 </template>
 
 <script>
@@ -55,7 +58,7 @@ export default {
           if (response.ok) {
               let token = await response.json();
               localStorage.setItem("token", token.jwt);
-              this.$router.push("ManagerVue"); // samme sti som routeren 
+              this.$router.push("Overview"); // samme sti som routeren 
           //     let payload = this.parseJwt(token);
 
           //     Object.keys(payload).forEach((key) => {
@@ -92,6 +95,15 @@ export default {
 </script>
 
 <style scoped>
+.container{
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  min-width: 300px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  border-radius: 5px;
+}
 .add-form {
   margin-bottom: 40px;
 }
