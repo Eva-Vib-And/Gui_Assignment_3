@@ -1,15 +1,17 @@
 <template>
-  <div v-show="showAddModel">
-  <AddModel @add-model="addModel"/>
+<router-view></router-view>
+  <Footer />
+  
 </template>
 
 <script>
-import AddModel from '@/components/AddModel.vue'
+//import Home from "@/views/Home.vue"
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: "App",
   components: {
-     AddModel,
+    Footer,
   },
 };
 </script>

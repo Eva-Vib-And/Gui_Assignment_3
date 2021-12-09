@@ -70,9 +70,7 @@
         </div>
 
         <input type="submit" value="Save Model" class="btn btn-block"/>
-        
    </form>
-
 </template>
 
 <script>
@@ -80,23 +78,23 @@ export default {
     name: 'AddModel',
     data(){
         return{
-            firstName: "string",
-            lastName: "string",
-            email: "string",
-            phoneNo: "string",
-            addresLine1: "string",
-            addresLine2: "string",
-            zip: "string",
-            city: "string",
-            country: "string",
-            birthDate: "2021-12-08T09:21:55.189Z",
-            nationality: "string",
+            firstName: "",
+            lastName: "",
+            email: "",
+            phoneNo: "",
+            addresLine1: "",
+            addresLine2: "",
+            zip: "",
+            city: "",
+            country: "",
+            birthDate: "",
+            nationality: "",
             height: 0,
             shoeSize: 0,
-            hairColor: "string",
-            eyeColor: "string",
-            comments: "string",
-            password: "string"
+            hairColor: "",
+            eyeColor: "",
+            comments: "",
+            password: ""
         }
     },
     methods: {
@@ -106,7 +104,7 @@ export default {
         alert('Please add a model')
         return
       }
-      const newModel = {
+      const AddModel = {
             firstName: this.firstName,
             lastName: this.lastName,
             email: this.email,
@@ -125,7 +123,7 @@ export default {
             comments: this.comments,
             password: this.password
       }
-      this.$emit('add-model', newModel)
+      this.$emit('add-model-details', AddModel)
       this.firstName =''
       this.lastName =''
       this.email =''
@@ -150,10 +148,10 @@ export default {
 
 <style scoped>
 .add-form {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .form-control {
-  margin: 10px 0;
+  margin: 0px 0;
 }
 .form-control label {
   display: block;
