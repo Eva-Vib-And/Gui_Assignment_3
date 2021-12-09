@@ -1,5 +1,7 @@
 <template>
-<router-view></router-view>
+<div v-show="showLogin"/>
+  <Login @login="login"/>
+<router-view></router-view> 
   <Footer />
   
 </template>
@@ -7,11 +9,14 @@
 <script>
 //import Home from "@/views/Home.vue"
 import Footer from '@/components/Footer.vue'
+import Login from '@/components/Login.vue'
+
 
 export default {
   name: "App",
   components: {
     Footer,
+     Login,
   },
 };
 </script>
