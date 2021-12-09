@@ -1,4 +1,5 @@
 import {createRouter, createWebHistory} from 'vue-router'
+import LoginSide from '@/views/LoginSide'
 import ManagerSide from '@/views/ManagerSide'
 import ModelSide from '@/views/ModelSide'
 import Home from '@/views/Home'
@@ -9,6 +10,11 @@ const routes = [
         path: '/',
         name:'Home',
         component: Home
+    },
+    {
+        path: '/loginside',
+        name: 'LoginSide',
+        component: LoginSide
     },
     {
         path: '/managerside',

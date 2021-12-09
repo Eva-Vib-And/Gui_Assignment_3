@@ -1,6 +1,7 @@
 <template>
 <div>
  <Header />
+ <!--<Login />-->
 <router-view></router-view> 
   <Footer />
 </div>
@@ -21,7 +22,6 @@ export default {
     Header,
     Footer,
     //Login
-    
   },
 }
 </script>

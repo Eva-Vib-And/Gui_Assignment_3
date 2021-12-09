@@ -1,4 +1,7 @@
 <template>
+<div class="main">
+ <h3>You are at LoginSide</h3>
+</div>
 <div class="container">
      <form @submit="onSubmit" class="add-form">
     <div class="form-control">
@@ -14,8 +17,6 @@
         placeholder="Password"
       />
     </div>
-    
-    
     <input type="submit" value="Login" class="btn btn-block" />
   </form>
   </div>
@@ -58,22 +59,7 @@ export default {
           if (response.ok) {
               let token = await response.json();
               localStorage.setItem("token", token.jwt);
-              this.$router.push("Overview"); // samme sti som routeren 
-          //     let payload = this.parseJwt(token);
-
-          //     Object.keys(payload).forEach((key) => {
-          // if (key.indexOf("role") !== -1) {
-          //   payload["role"] = payload[key];
-          // }
-
-          // if (key.indexOf("emailaddress") !== -1) {
-          //   payload["email"] = payload[key];
-          // }
-          // });
-          // localStorage.setItem("email", payload.email);
-          // localStorage.setItem("role", payload.role);
-
-              // Change view to some other component // …
+              this.$router.push('@/views/ManagerSide');
           } else {
           alert("Server returned: " + response.statusText);
             }
@@ -81,15 +67,6 @@ export default {
         }
         return;
         },
-        // parseJwt (token) {
-        // var base64Url = token.split('.')[1];
-        // var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-        // var jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
-        // return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-        // }).join(''));
-
-        // return JSON.parse(jsonPayload);
-        // },  
   },
 }
 </script>
