@@ -1,15 +1,15 @@
 <template>
-  <div v-show="showAddModel"/>
-  <AddModel @add-model="addModel"/>
+  <div v-show="showLogin"/>
+  <Login @login="login"/>
 </template>
 
 <script>
-import AddModel from '@/components/AddModel.vue'
+import Login from '@/components/Login.vue'
 
 export default {
   name: "App",
   components: {
-     AddModel,
+     Login,
   },
 };
 </script>
