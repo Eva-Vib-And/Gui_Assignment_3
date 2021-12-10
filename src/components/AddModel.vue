@@ -78,9 +78,11 @@ export default {
     name: 'AddModel',
     data(){
         return{
+            Account: "",
             firstName: "",
             lastName: "",
             email: "",
+            password: "",
             phoneNo: "",
             addresLine1: "",
             addresLine2: "",
@@ -94,7 +96,7 @@ export default {
             hairColor: "",
             eyeColor: "",
             comments: "",
-            password: ""
+            
         }
     },
     methods: {
@@ -104,7 +106,8 @@ export default {
         alert('Please add a model')
         return
       }
-      const AddModel = {
+      var AddModel = {
+            Account: this.Account,
             firstName: this.firstName,
             lastName: this.lastName,
             email: this.email,
@@ -124,6 +127,7 @@ export default {
             password: this.password
       }
       this.$emit('add-model-details', AddModel)
+      this.Account =''
       this.firstName =''
       this.lastName =''
       this.email =''

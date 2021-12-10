@@ -10,7 +10,7 @@
             <li> <a> <router-link to="/modelside">Model page</router-link></a></li>
             <li> 
                 <a> 
-                    <router-link to="/about">About</router-link>
+                    <router-link to="/">About</router-link>
                 </a>
             </li>
         </ul>

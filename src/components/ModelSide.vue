@@ -10,44 +10,53 @@
 <script>
 //import Model from '@/components/Model.vue'
 import Models from '@/components/Models.vue'
+//import axios from 'axios'
 
 export default {
     name: 'ModelSide',
     components: {
        // Model,
-        Models
+        Models,
     },
     data() {
         return{
             models: [],
         }
     },
-    method: {
+    methods: {
 
         async fetchModels(){
-            const res = await fetch("https://localhost:44368/api/Models", {
+            try {
+                console.log("token"+localStorage.getItem("token"))
+                  let res = await fetch("https://localhost:44368/api/Models",{
                     method: 'GET',
                     credentials: 'include',
                      headers: {
-                        'Authorization': 'Bearer' + localStorage.getItem("token"),
-                        'Content Type': 'application/json'
+                        'Authorization': 'Bearer ' + localStorage.getItem("token"),
+                        'Content-Type': 'application/json'
                     },
-            }).then(responseJson =>{ this.response =responseJson}).catch(error => alert(alert('Something bad happened ' + error)))
-            
-            const data = await res.json()
-             return data
+                })//.then(responseJson =>{ this.response = responseJson}).catch(error => alert(alert('Something bad happened ' + error)))
+                if (res.ok) {
+                let data = await res.json()
+                this.models= data
+                }
+            }catch (error) {
+                alert(alert('Something bad happened ' + error))
+            }
+           
         },
-         async fetchModek(id){
+         async fetchModel(id){
             const res = await fetch(`https://localhost:44368/api/Models/${id}`)
 
             const data = await res.json()
 
             return data
-    }
+        }
 
     },
     async created(){
     this.models = await this.fetchModels()
+    console.log('created')
   }
    
 }

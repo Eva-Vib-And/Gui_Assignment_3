@@ -1,6 +1,6 @@
 <template>
     <h1>Model side with a models fucnction:</h1>
-<div :key="model.id">
+<div :key="model.account">
     <h3>{{model.firstName}}</h3> | {{model.lastName}}
     <h2>{{model.phoneNo}}|{{model.email}}</h2>
 </div>

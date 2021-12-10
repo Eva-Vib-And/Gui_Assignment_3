@@ -1,7 +1,5 @@
 <template>
-   <div v-show="showLogin">
-  <Login @login="login"/>
-   </div>
+  <Login/>
 </template>
 
 <script>
