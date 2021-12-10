@@ -58,7 +58,7 @@ export default {
           if (response.ok) {
               let token = await response.json();
               localStorage.setItem("token", token.jwt);
-              this.$router.push("Overview"); // samme sti som routeren 
+              this.$router.push("ManagerSide"); // samme sti som routeren 
           //     let payload = this.parseJwt(token);
 
           //     Object.keys(payload).forEach((key) => {

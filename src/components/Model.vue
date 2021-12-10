@@ -1,7 +1,11 @@
 <template>
     <h1>Model side with a models fucnction:</h1>
-    <h3>See list with accepted jobs</h3>
-    <h3>Add expenses to job</h3>
+<div :key="model.id">
+    <h3>{{model.firstName}}</h3> | {{model.lastName}}
+    <h2>{{model.phoneNo}}|{{model.email}}</h2>
+</div>
+<!--<div :key="model.id" v-for="model in model.job"/>-->
+    
 </template>
 <script>
 export default {

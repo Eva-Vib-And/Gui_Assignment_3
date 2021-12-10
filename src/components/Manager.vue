@@ -1,6 +1,5 @@
 <template>
-    <h1>Manager side with a managers job:</h1>
-    
+    <h1>Manager side with a managers job:</h1>  
 </template>
 
 <script>
