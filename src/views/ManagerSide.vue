@@ -6,8 +6,9 @@
 </div>
     <!-- Side navigation -->
 <div class="sidenav">
-  <a router-link to="">Add Model</a>
-   <a router-link to="">Add Manager</a>
+  <a> <router-link to="/createmodel">Add Model</router-link>
+  </a>
+   <a ><router-link to="/createmanager">Add Manager</router-link></a>
     <a router-link to="">Add New Job</a>
   <a router-link to="">Add Model to Job</a>
     <a router-link to="">Delete model from Jobs</a>

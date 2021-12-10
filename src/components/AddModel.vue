@@ -1,75 +1,75 @@
 <template>
    <form @submit="onSubmit" class="add-form"> 
         <div class="form-control">
-            <label>Models firstname</label>
-             <input type="text" v-model="firstName" name="firstName" placeholder="Add firstName" />
+            <label for="FirstName">Models firstname</label>
+             <input type="text" v-model="FirstName" name="FirstName" required />
         </div>
         <div class="form-control">
-            <label>Models lastname</label>
-             <input type="text" v-model="lastName" name="lastName" placeholder="Add lastName" />
+            <label for="LastName">Models lastname</label>
+             <input type="text" v-model="LastName" name="LastName" required />
         </div>
         <div class="form-control">
-            <label>Models email</label>
-             <input type="text" v-model="email" name="email" placeholder="Add Email" />
+            <label for="Email">Models email</label>
+             <input type="text" v-model="Email" name="Email" required />
         </div>
         <div class="form-control">
-            <label>Models phoneNo</label>
-             <input type="text" v-model="phoneNo" name="phoneNo" placeholder="Add phoneNo" />
+            <label for="PhoneNo">Models phoneNo</label>
+             <input type="text" v-model="PhoneNo" name="PhoneNo" required />
         </div>
         <div class="form-control">
-            <label>Models addresLine1</label>
-             <input type="text" v-model="addresLine1" name="addresLine1" placeholder="Add addresLine1" />
+            <label for="AdressLine1">Models addresLine1</label>
+             <input type="text" v-model="AddresLine1" name="AddresLine1" required />
         </div>
         <div class="form-control">
-            <label>Models addresLine2</label>
-             <input type="text" v-model="addresLine2" name="addresLine2" placeholder="Add addresLine2" />
+            <label for="AdressLine2">Models addresLine2</label>
+             <input type="text" v-model="AddresLine2" name="AddresLine2" />
         </div>
         <div class="form-control">
-            <label>Models zip</label>
-             <input type="text" v-model="zip" name="zip" placeholder="Add zip" />
+            <label for="Zip">Models zip</label>
+             <input type="text" v-model="Zip" name="Zip" required />
         </div>
         <div class="form-control">
-            <label>Models city</label>
-             <input type="text" v-model="city" name="city" placeholder="Add city" />
+            <label for="City">Models city</label>
+             <input type="text" v-model="City" name="City" required />
         </div>
         <div class="form-control">
-            <label>Models country</label>
-             <input type="text" v-model="country" name="country" placeholder="Add country" />
+            <label for="Country">Models country</label>
+             <input type="text" v-model="Country" name="Country" required />
         </div>
         <div class="form-control">
-            <label>Models birthDate</label>
-             <input type="text" v-model="birthDate" name="birthDate" placeholder="Add birthDate" />
+            <label for="Birthday">Models birthDate</label>
+             <input type="text" v-model="BirthDate" name="BirthDate" required />
         </div>
         <div class="form-control">
-            <label>Models nationality</label>
-             <input type="text" v-model="nationality" name="nationality" placeholder="Add nationality" />
+            <label for="Nationality">Models nationality</label>
+             <input type="text" v-model="Nationality" name="Nationality" required />
         </div>
         <div class="form-control">
-            <label>Models height</label>
-             <input type="text" v-model="height" name="height" placeholder="Add height" />
+            <label for="Height">Models height</label>
+             <input type="text" v-model="Height" name="Height" required />
         </div>
         <div class="form-control">
-            <label>Models shoeSize</label>
-             <input type="text" v-model="shoeSize" name="shoeSize" placeholder="Add shoeSize" />
+            <label for="ShoeSize">Models shoeSize</label>
+             <input type="text" v-model="ShoeSize" name="ShoeSize" required />
         </div>
         <div class="form-control">
-            <label>Models hairColor</label>
-             <input type="text" v-model="hairColor" name="hairColor" placeholder="Add hairColor" />
+            <label for="HairColor">Models hairColor</label>
+             <input type="text" v-model="HairColor" name="HairColor" required />
         </div>
         <div class="form-control">
-            <label>Models eyeColor</label>
-             <input type="text" v-model="eyeColor" name="eyeColor" placeholder="Add eyeColor" />
+            <label for="EyeColor">Models eyeColor</label>
+             <input type="text" v-model="EyeColor" name="EyeColor" required />
         </div>
         <div class="form-control">
-            <label>Models comments</label>
-             <input type="text" v-model="comments" name="comments" placeholder="Add comments" />
+            <label for="Comments">Models comments</label>
+             <input type="text" v-model="Comments" name="Comments" />
         </div>
         <div class="form-control">
-            <label>Models password</label>
-             <input type="text" v-model="password" name="password" placeholder="Add password" />
+            <label for="PassWord">Models password</label>
+             <input type="text" v-model="Password" name="Password" required />
         </div>
 
-        <input type="submit" value="Save Model" class="btn btn-block"/>
+        <input type="button" value="Save Model" v-on:click="submit" class="btn btn-block"/>
    </form>
 </template>
 
@@ -79,72 +79,86 @@ export default {
     data(){
         return{
             Account: "",
-            firstName: "",
-            lastName: "",
-            email: "",
-            password: "",
-            phoneNo: "",
-            addresLine1: "",
-            addresLine2: "",
-            zip: "",
-            city: "",
-            country: "",
-            birthDate: "",
-            nationality: "",
-            height: 0,
-            shoeSize: 0,
-            hairColor: "",
-            eyeColor: "",
-            comments: "",
+            FirstName: "",
+            LastName: "",
+            Email: "",
+            Password: "",
+            PhoneNo: "",
+            AddresLine1: "",
+            AddresLine2: "",
+            Zip: "",
+            City: "",
+            Country: "",
+            BirthDate: "2019-01-06T17:16:40",
+            Nationality: "",
+            Height: 0,
+            ShoeSize: 0,
+            HairColor: "",
+            EyeColor: "",
+            Comments: "",
             
         }
     },
     methods: {
-        onSubmit(e) {
-      e.preventDefault()
-      if (!this.text) {
-        alert('Please add a model')
-        return
-      }
+       async submit(){
       var AddModel = {
             Account: this.Account,
-            firstName: this.firstName,
-            lastName: this.lastName,
-            email: this.email,
-            phoneNo: this.phoneNo,
-            addresLine1: this.addresLine1,
-            addresLine2: this.addresLine2,
-            zip: this.zip,
-            city: this.city,
-            country: this.country,
-            birthDate: this.birthDate,
-            nationality: this.nationality,
-            height: this.height,
-            shoeSize: this.shoeSize,
-            hairColor: this.hairColor,
-            eyeColor: this.eyeColor,
-            comments: this.comments,
-            password: this.password
+            FirstName: this.FirstName,
+            LastName: this.LastName,
+            Email: this.Email,
+            Password: this.Password,
+            PhoneNo: this.PhoneNo,
+            AddresLine1: this.AddresLine1,
+            AddresLine2: this.AddresLine2,
+            Zip: this.Zip,
+            City: this.City,
+            Country: this.Country,
+            BirthDate: this.BirthDate,
+            Nationality: this.Nationality,
+            Height: parseFloat(this.Height),
+            ShoeSize: parseInt(this.ShoeSize),
+            HairColor: this.HairColor,
+            EyeColor: this.EyeColor,
+            Comments: this.Comments,
       }
-      this.$emit('add-model-details', AddModel)
+         try {
+          console.log("token"+localStorage.getItem("token"))
+          let res = await fetch("https://localhost:44368/api/Models",{
+          method: 'POST',
+          body: JSON.stringify(AddModel),
+          credentials: 'include',
+          headers: {
+              'Authorization': 'Bearer ' + localStorage.getItem("token"),
+              'Content-Type': 'application/json'
+          }
+
+      })//.then(responseJson => {this.response = responseJson;}).catch(error => alert('Something bad happend: ' + error));
+        if (res.ok) {
+                let data = await res.json()
+                this.models = [...this.models,data]
+                this.$router("ManagerSide");
+            }
+        }catch (error) {
+                alert(alert('Something bad happened ' + error))
+        }
       this.Account =''
-      this.firstName =''
-      this.lastName =''
-      this.email =''
-      this.phoneNo =''
-      this.addresLine1 =''
-      this.addresLine2 =''
-      this.zip=''
-      this.city=''
-      this.country=''
-      this.birthDate =''
-      this.nationality=''
-      this.height=0
-      this.shoeSize=0
-      this.hairColor=''
-      this.eyeColor=''
-      this.comments=''
-      this.password=''
+      this.FirstName =''
+      this.LastName =''
+      this.Email =''
+      this.Password=''
+      this.PhoneNo =''
+      this.AddresLine1 =''
+      this.AddresLine2 =''
+      this.Zip=''
+      this.City=''
+      this.Country=''
+      this.BirthDate ='2019-01-06T17:16:40'
+      this.Nationality=''
+      this.Height=''
+      this.ShoeSize=''
+      this.HairColor=''
+      this.EyeColor=''
+      this.Comments=''
         },
     },
 }

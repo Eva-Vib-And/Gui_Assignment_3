@@ -3,6 +3,8 @@ import LoginSide from '@/views/LoginSide'
 import ManagerSide from '@/views/ManagerSide'
 import ModelSide from '@/components/ModelSide.vue'
 import Home from '@/views/Home'
+import CreateModel from '@/views/CreateModel'
+import CreateManager from '@/views/CreateManager'
 
 
 const routes = [
@@ -25,6 +27,16 @@ const routes = [
         path: '/modelside',
         name:'ModelSide',
         component: ModelSide
+    },
+    {
+        path: '/createmodel',
+        name:'CreateModel',
+        component: CreateModel
+    },
+    {
+        path: '/createmanager',
+        name:'Createmanager',
+        component: CreateManager
     },
 ]
 
