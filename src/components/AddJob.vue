@@ -1,21 +1,27 @@
 <template>
-     <form @submit="onSubmit" class="add-form">
     <div class="form-control">
-      <label>Customer</label>
-      <input type="text" v-model="customer" name="customer" placeholder="Add Job" />
+        <label for="costumer">Customer</label>
+        <input type="text" v-model="costumer" name="costumer">
     </div>
     <div class="form-control">
-      <label>Day & Time</label>
-      <input
-        type="text"
-        v-model="startDate"
-        name="startDate"
-        placeholder="Add startDate"
-      />
+            <label for="startDate">StartDate</label>
+             <input type="date" v-model="startDate" name="startDate" />
     </div>
-    <input type="submit" value="Save Job" class="btn btn-block" />
-  </form>
+    <div class="form-control">
+            <label for="days">Days </label>
+             <input type="number" v-model="days" name="days" />
+    </div>
+    <div class="form-control">
+            <label for="location">Location</label>
+             <input type="text" v-model="location" name="location" />
+    </div>
+    <div class="form-control">
+            <label for="comments">Comments</label>
+             <input type="text" v-model="comments" name="comments" />
+    </div>
+    <input type="button" value="Add New Job" v-on:click="submit" class="btn btn-block"/>
 </template>
+
 <script>
 export default {
     name: 'AddJob',
@@ -24,33 +30,32 @@ export default {
             customer: '',
             startDate: "2021-12-08T13:05:11.752Z",
             days: 0,
-            location: "string",
-            comments: "string"
+            location: "Location",
+            comments: "Comment"
         }
     },
+
     methods: {
-            onSubmit(e) {
-      e.preventDefault()
-      if (!this.text) {
-        alert('Please add a job')
-        return
-      }
-      const newJob = {
-        customer:this.customer,
-        startDate:this.startDate,
-        days:this.days,
-        location:this.location,
-        comments:this.comments,
-      }
-      this.$emit('add-job', newJob)
-      this.customer = ''
-      this.startDate=''
-      this.days = 0
-      this.location =''
-      this.comments =''
-        },
-    },
+      Add() {
+        var url = "https://localhost:44368/api/Jobs";
+        this.form.days = Number(this.form.days);
+        fetch(url, {
+          method: 'Post',
+          body: JSON.stringify(this.form),
+                    credentials: 'include',
+                    headers: {
+                        'Authorization': 'Bearer ' + localStorage.getItem("token"),
+                        'Content-Type': 'application/json'
+                    }
+                }).then(responseJson => {
+                    this.response = responseJson;
+                    this.$router.push('@/views/AddNewJob');
+                })
+                    .catch(error => alert('Something bad happened: ' + error));
+        }
+    }
 }
+
 </script>
 <style scoped>
 .add-form {

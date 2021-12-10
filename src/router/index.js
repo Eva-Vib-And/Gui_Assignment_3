@@ -1,10 +1,10 @@
 import {createRouter, createWebHistory} from 'vue-router'
-import LoginSide from '@/views/LoginSide'
 import ManagerSide from '@/views/ManagerSide'
 import ModelSide from '@/views/ModelSide.vue'
 import Home from '@/views/Home'
 import CreateModel from '@/views/CreateModel'
 import CreateManager from '@/views/CreateManager'
+import AddNewJob from '@/views/AddNewJob'
 
 
 const routes = [
@@ -12,11 +12,6 @@ const routes = [
         path: '/',
         name:'Home',
         component: Home
-    },
-    {
-        path: '/loginside',
-        name: 'LoginSide',
-        component: LoginSide
     },
     {
         path: '/managerside',
@@ -37,6 +32,11 @@ const routes = [
         path: '/createmanager',
         name:'Createmanager',
         component: CreateManager
+    },
+    {
+        path: '/addnewjob',
+        name:'AddNewJob',
+        component: AddNewJob
     },
 ]
 
