@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import jwt_decode from "jwt-decode";
 export default {
     name: 'Login',
     data(){
@@ -55,22 +56,13 @@ export default {
           if (response.ok) {
               let token = await response.json();
               localStorage.setItem("token", token.jwt);
+              
               this.$router.push("ManagerVue"); // samme sti som routeren 
-          //     let payload = this.parseJwt(token);
-
-          //     Object.keys(payload).forEach((key) => {
-          // if (key.indexOf("role") !== -1) {
-          //   payload["role"] = payload[key];
-          // }
-
-          // if (key.indexOf("emailaddress") !== -1) {
-          //   payload["email"] = payload[key];
-          // }
-          // });
-          // localStorage.setItem("email", payload.email);
-          // localStorage.setItem("role", payload.role);
-
-              // Change view to some other component // …
+              var decoded = jwt_decode(token.jwt);
+              console.log(decoded);
+              var decodeHeader = jwt_decode(token.jwt, {header: true});
+              console.log(decodeHeader);
+              this.$router.push('@/views/ManagerSide');
           } else {
           alert("Server returned: " + response.statusText);
             }
