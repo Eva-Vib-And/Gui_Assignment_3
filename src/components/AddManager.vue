@@ -1,19 +1,19 @@
 <template>
     <div class="form-control">
         <label for="email">Email</label>
-        <input type="text" v-model="email" name="email">
+        <input type="text" v-model="email" name="email" required>
     </div>
     <div class="form-control">
             <label for="password">password</label>
-             <input type="text" v-model="password" name="password" />
+             <input type="text" v-model="password" name="password" required />
     </div>
     <div class="form-control">
             <label for="managerFName">FirstName </label>
-             <input type="text" v-model="managerFName" name="managerFName" />
+             <input type="text" v-model="managerFName" name="managerFName" required />
     </div>
     <div class="form-control">
             <label for="managerLName">LastName</label>
-             <input type="text" v-model="managerLName" name="managerLName" />
+             <input type="text" v-model="managerLName" name="managerLName" required/>
     </div>
     <input type="button" value="Save Manager" v-on:click="submit" class="btn btn-block"/>
 </template>
@@ -36,7 +36,7 @@ export default{
                  email: this.email,
                  password: this.password,
                  managerFName: this.managerFName,
-                 managerLName: this.managerLName
+                 managerLName: this.managerLName,
             }
          try {
           //console.log("token"+localStorage.getItem("token"))
@@ -53,7 +53,7 @@ export default{
         if (res.ok) {
                 let data = await res.json()
                 this.models = [...this.models,data]
-                this.$router("ManagerSide");
+                //this.$router("ManagerSide");
             }
         }catch (error) {
                 alert(alert('Something bad happened ' + error))
@@ -62,7 +62,6 @@ export default{
          this.password=''
          this.managerFName=''
          this.managerLName=''
-
         }
      }
 }

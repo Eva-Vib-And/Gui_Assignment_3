@@ -1,7 +1,7 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import LoginSide from '@/views/LoginSide'
 import ManagerSide from '@/views/ManagerSide'
-import ModelSide from '@/components/ModelSide.vue'
+import ModelSide from '@/views/ModelSide.vue'
 import Home from '@/views/Home'
 import CreateModel from '@/views/CreateModel'
 import CreateManager from '@/views/CreateManager'

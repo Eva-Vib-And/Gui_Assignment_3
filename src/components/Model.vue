@@ -4,7 +4,7 @@
     <h3>{{model.firstName}}</h3> | {{model.lastName}}
     <h2>{{model.phoneNo}}|{{model.email}}</h2>
 </div>
-<!--<div :key="model.id" v-for="model in model.job"/>-->
+<!-- right know just trying to get it to write something.... not working :(-->
     
 </template>
 <script>

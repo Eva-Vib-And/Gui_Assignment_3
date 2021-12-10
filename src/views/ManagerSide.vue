@@ -18,9 +18,9 @@
 <style scope>
 /* The sidebar menu */
 .sidenav {
-    margin-top: 2.5cm;
+ margin-top: 2.5cm;
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 180px; /* Set the width of the sidebar */
+  width: 165px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
@@ -31,7 +31,8 @@
 }
 /* The navigation menu links */
 .sidenav a {
-  padding: 6px 8px 6px 16px;
+  padding-top: 8;
+  padding-bottom: 6;
   text-decoration: none;
   font-size: 20px;
   color: #818181;
@@ -45,7 +46,7 @@
 /* Style page content */
 .main {
  margin-left: 5cm;
-  margin-left: 160px; /* Same as the width of the sidebar */
+  margin-left: 180px; /* Same as the width of the sidebar */
   padding-left: 30px;
 }
 </style>

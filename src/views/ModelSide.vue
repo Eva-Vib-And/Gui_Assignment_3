@@ -1,10 +1,12 @@
 <template>
 <div class="main">
     <h3>You are at modelside, you can:</h3>
-    <h3>See list with accepted jobs</h3>
     <h3>Add expenses to job</h3>
+    <div v-for="model in models" :key="model.ModeId">
+        <Models :models="models"/>
+    </div>
 </div>  
-<Models :models="models" />
+<!--<Models />-->
 </template>
 
 <script>
