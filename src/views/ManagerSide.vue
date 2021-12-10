@@ -1,6 +1,7 @@
 <template>
 <!-- Page content -->
 <div class="main">
+  <h1>Der er mange mangler i programmet</h1>
  <h3>You are at managerside</h3>
     
 </div>
