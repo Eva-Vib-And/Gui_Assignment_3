@@ -51,9 +51,9 @@ export default{
 
       })//.then(responseJson => {this.response = responseJson;}).catch(error => alert('Something bad happend: ' + error));
         if (res.ok) {
-                let data = await res.json()
-                this.models = [...this.models,data]
-                //this.$router("ManagerSide");
+               // let data = await res.json()
+                //this.models = [...this.models,data]
+                this.$router.push("ManagerSide");
             }
         }catch (error) {
                 alert(alert('Something bad happened ' + error))

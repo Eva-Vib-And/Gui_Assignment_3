@@ -4,22 +4,29 @@
     <h3>Add expenses to job</h3>
     <div v-for="model in models" :key="model.ModeId">
         <Models :models="models"/>
+        <li v-for="model in models" v-bind:key="model.modelId">{{model.firstName}}</li>
     </div>
+
+    <table>
+        <tr>
+            <td v-for="model in models" :key="model.id"></td>
+        </tr>
+    </table>
 </div>  
 <!--<Models />-->
 </template>
 
 <script>
 //import Model from '@/components/Model.vue'
-import Models from '@/components/Models.vue'
+//import Models from '@/components/Models.vue'
 //import axios from 'axios'
 
 export default {
     name: 'ModelSide',
-    components: {
+    /*components: {
        // Model,
         Models,
-    },
+    },*/
     data() {
         return{
             models: [],
