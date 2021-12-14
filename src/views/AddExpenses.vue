@@ -55,7 +55,7 @@ export default{
                jobId: this.jobId,
            }
            try{
-        let res= await fetch("https://localhost:44368/api/expenses", {
+        let res= await fetch("https://localhost:44368/api/Expenses", {
                 method: "POST",
                 body: JSON.stringify(bodydata),
                 credentials:'include',

@@ -1,4 +1,9 @@
 <template>
+<div class="h-form"> 
+  <h2>You are at add manager page</h2>
+  <p>Please fill every block before pressing the add button</p>
+</div>
+
     <div class="form-control">
         <label for="email">Email</label>
         <input type="text" v-model="email" name="email" required>
@@ -15,7 +20,7 @@
             <label for="managerLName">LastName</label>
              <input type="text" v-model="managerLName" name="managerLName" required/>
     </div>
-    <input type="button" value="Save Manager" v-on:click="submit" class="btn btn-block"/>
+    <input type="button" value="Add Manager" v-on:click="submit" class="btn btn-block"/>
 </template>
 
 
@@ -67,12 +72,18 @@ export default{
 }
 
 </script>
-<style scoped>
+<style scope>
+.h-form{
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
 .add-form {
   margin-bottom: 40px;
 }
 .form-control {
-  margin: 0px 0;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  margin-right: 600px
 }
 .form-control label {
   display: block;

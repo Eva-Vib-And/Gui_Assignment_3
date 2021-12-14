@@ -34,6 +34,9 @@ header{
     align-items: center;
     margin-bottom: 20px;
 }
+h1{
+  margin-left: 20px;
+}
 ul {
    list-style-type: none;
   margin: 0;
