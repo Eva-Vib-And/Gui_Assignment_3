@@ -1,9 +1,7 @@
 <template>
 <div class="main">
-    <h3>You are at modelside, you can:</h3>
-    <h3> - See jobs</h3>
-    <h3> - Add expenses to job</h3>
-    <p>Navigate to desired funktion through navbar to the left</p>
+    <h2>You are at Models frontpage</h2>
+    <p>Navigate to desired funktion through navbar to the left <br>You will return to the models frontpage again when pressing 'Model page' in the topbar</p>
     
 </div>  
    <!-- Side navigation -->
