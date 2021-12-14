@@ -8,6 +8,7 @@ import AddNewJob from '@/views/AddNewJob'
 import SeeJobs from '@/views/SeeJobs'
 import AddExpenses from '@/views/AddExpenses'
 import SeeModels from '@/views/SeeModels'
+import ManageJobModel from '@/views/ManageJobModel'
 
 
 const routes = [
@@ -55,6 +56,11 @@ const routes = [
         path: '/seeModels',
         name:'SeeModels',
         component: SeeModels
+    },
+    {
+        path: '/Manage_J_M',
+        name:'manageJobModel',
+        component: ManageJobModel
     },
 ]
 

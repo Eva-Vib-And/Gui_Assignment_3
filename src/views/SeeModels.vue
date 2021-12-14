@@ -38,14 +38,6 @@ export default {
             }
            
         },
-         /*async fetchModel(id){
-            const res = await fetch(`https://localhost:44368/api/Models/${id}`)
-
-            const data = await res.json()
-
-            return data
-        }*/
-
     },
     async created(){
     this.models = await this.fetchModels()
