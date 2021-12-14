@@ -11,7 +11,7 @@
   </a>
    <a ><router-link to="/createmanager">Add Manager</router-link></a>
     <a> <router-link to="/addnewjob">Add New Job</router-link></a>
-  <a> <router-link to="/Manage_J_M"> Add Model to Job </router-link></a>
+  <a> <router-link to="/manage_J_M"> Add Model to Job </router-link></a>
     <a> <router-link to="/seeJobs">See Jobs</router-link></a>
     <a> <router-link to="/seeModels">See Models </router-link></a>
 </div>

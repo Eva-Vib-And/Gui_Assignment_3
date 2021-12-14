@@ -1,5 +1,5 @@
 <template>
-    <p v-for="job in jobs" :key="job.efjobId"> {{job.location}}</p>
+    <p v-for="job in jobs" :key="job.efjobId"> {{job.customer}}||{{job.location}}</p>
 </template>
 
 <script>

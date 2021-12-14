@@ -58,7 +58,7 @@ const routes = [
         component: SeeModels
     },
     {
-        path: '/Manage_J_M',
+        path: '/manage_J_M',
         name:'manageJobModel',
         component: ManageJobModel
     },
