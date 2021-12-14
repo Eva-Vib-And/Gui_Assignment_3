@@ -12,7 +12,8 @@
    <a ><router-link to="/createmanager">Add Manager</router-link></a>
     <a> <router-link to="/addnewjob">Add New Job</router-link></a>
   <a router-link to="">Add Model to Job</a>
-    <a router-link to="">Delete model from Jobs</a>
+    <a> <router-link to="/seeJobs">See Jobs</router-link></a>
+    <a> <router-link to="/seeModels">See Models </router-link></a>
 </div>
 </template>
 

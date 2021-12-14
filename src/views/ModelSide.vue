@@ -1,81 +1,59 @@
 <template>
 <div class="main">
     <h3>You are at modelside, you can:</h3>
-    <h3>Add expenses to job</h3>
-    <div v-for="model in models" :key="model.ModeId">
-        <Models :models="models"/>
-        <li v-for="model in models" v-bind:key="model.modelId">{{model.firstName}}</li>
-    </div>
-
-    <table>
-        <tr>
-            <td v-for="model in models" :key="model.id"></td>
-        </tr>
-    </table>
+    <h3> - See jobs</h3>
+    <h3> - Add expenses to job</h3>
+    <p>Navigate to desired funktion through navbar to the left</p>
+    
 </div>  
-<!--<Models />-->
+   <!-- Side navigation -->
+<div class="sidenav">
+  <a router-link to="/addExpenses">Add Expense to Job</a>
+    <a> <router-link to="/seeJobs">See Jobs</router-link></a>
+</div>
 </template>
 
 <script>
-//import Model from '@/components/Model.vue'
-//import Models from '@/components/Models.vue'
-//import axios from 'axios'
-
 export default {
     name: 'ModelSide',
-    /*components: {
-       // Model,
-        Models,
-    },*/
-    data() {
-        return{
-            models: [],
-        }
-    },
-    methods: {
-
-        async fetchModels(){
-            try {
-                console.log("token"+localStorage.getItem("token"))
-                  let res = await fetch("https://localhost:44368/api/Models",{
-                    method: 'GET',
-                    credentials: 'include',
-                     headers: {
-                        'Authorization': 'Bearer ' + localStorage.getItem("token"),
-                        'Content-Type': 'application/json'
-                    },
-                })//.then(responseJson =>{ this.response = responseJson}).catch(error => alert(alert('Something bad happened ' + error)))
-                if (res.ok) {
-                let data = await res.json()
-                this.models= data
-                }
-            }catch (error) {
-                alert(alert('Something bad happened ' + error))
-            }
-           
-        },
-         async fetchModel(id){
-            const res = await fetch(`https://localhost:44368/api/Models/${id}`)
-
-            const data = await res.json()
-
-            return data
-        }
-
-    },
-    async created(){
-    this.models = await this.fetchModels()
-    console.log('created')
-  }
+   
    
 }
 </script>
 
 
-<style>
+<style scope>
+/* The sidebar menu */
+.sidenav {
+ margin-top: 2.5cm;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 165px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #4d4d4d; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  
+}
+/* The navigation menu links */
+.sidenav a {
+  padding-top: 8;
+  padding-bottom: 6;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
 /* Style page content */
 .main {
+ margin-left: 5cm;
   margin-left: 160px; /* Same as the width of the sidebar */
-  padding:0px 10px;
+  padding-left: 30px;
 }
 </style>
