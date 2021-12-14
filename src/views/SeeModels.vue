@@ -1,5 +1,13 @@
 <template>
+
+        <h1>List of Models</h1>
     <table>
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>PhoneNo</th>
+            <th>Email</th>
+        </tr>
         <tr v-for="model in models" :key="model.efModelId">
             <td >{{model.firstName}}</td>
             <td>{{model.lastName}}</td>
@@ -45,3 +53,21 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+h1{
+    color: black;
+    text-align: center;
+    margin-right: 100px;
+}
+table, td, th {
+  border: 1px solid black;
+  margin: 10px;
+  text-align: center;
+}
+table {
+  width: 80%;
+  margin-left: 10%;
+  border-collapse: collapse;
+}
+</style>
