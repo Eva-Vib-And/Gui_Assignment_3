@@ -1,11 +1,12 @@
 <template>
     <h2>Add expenses</h2>
+    <form class="add-form"> 
     <div class="form-control">
             <label for="text">Expense: </label>
              <input type="text" v-model="text" name="text" required />
     </div>
     <div class="form-control">
-            <label for="amount">amount</label>
+            <label for="amount">Amount</label>
              <input type="text" v-model="amount" name="amount" required/>
     </div>
     <div class="form-control">
@@ -20,6 +21,7 @@
         </option>
     </select>
     </div>
+    </form>
     
 
     <button type="button" value="Add Expense" v-on:click="addExpense" class="btn btn-block">Add New Expenses</button>
@@ -80,23 +82,30 @@ export default{
          this.amount=0
                    
         },
-    
     }
 }
 </script>
 <style scope>
+h2{
+    margin: 20px;
+    text-align: left;
+}
 .option-form {
- margin-left: 50px;
+ margin-left: 20px;
  font-size: 20px;
  margin-bottom: 20px;
+ margin-right: 0;
 }
 .add-form {
-  margin-bottom: 40px;
+  background-color: #f2f2f2;
+  width: 950px;
+  padding: 0px;
+  margin: 300 30 300 0;
 }
 .form-control {
-  margin-left: 50px;
-  margin-bottom: 10px;
-  margin-right: 600px
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 500px;
 }
 .form-control label {
   display: block;

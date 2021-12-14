@@ -100,7 +100,9 @@ export default {
   border-radius: 5px;
 }
 .add-form {
-  margin-bottom: 40px;
+  margin-bottom: 0px;
+  background: #f2f2f2;
+  width: 0px;
 }
 .form-control {
   margin: 20px 0;

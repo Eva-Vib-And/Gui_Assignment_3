@@ -1,4 +1,5 @@
 <template>
+  <form class="add-form">
     <div class="form-control">
         <label for="costumer">Customer</label>
         <input type="text" v-model="costumer" name="costumer">
@@ -20,6 +21,7 @@
              <input type="text" v-model="comments" name="comments" />
     </div>
     <input type="button" value="Add New Job" v-on:click="submit" class="btn btn-block"/>
+  </form>
 </template>
 
 <script>
@@ -62,12 +64,8 @@ h2{
     margin: 20px;
     text-align: left;
 }
-.add-form {
-  margin-bottom: 40px;
-  margin-right: 10px;
-}
 .form-control {
-  margin: 0px 0;
+  margin: 0px;
 }
 .form-control label {
   display: block;
@@ -78,10 +76,13 @@ div {
   width: 525px;
   padding: 10px;
 }
+.add-form {
+  margin-bottom: 40px;
+  margin-right: 10px;
+}
 .form-control input {
   width: 100%;
   height: 40px;
-  margin: 0px;
   padding: 3px 7px;
   font-size: 17px;
 }
