@@ -40,20 +40,20 @@ export default {
 <style scope>
 h2{
     margin: 20px;
+    text-align: center;
 }
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
-  margin: 20px, 20px, 20px, 20px;
+  width: 85%;
+  margin-left: 90px;
 }
 
 td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
+  border: 1px solid black;
+  text-align: center;
   padding: 8px;
 }
-
 tr:nth-child(even) {
   background-color: #dddddd;
 }

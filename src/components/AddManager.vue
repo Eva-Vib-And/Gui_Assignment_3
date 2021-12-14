@@ -1,15 +1,15 @@
 <template>
 <div class="h-form"> 
-  <h2>You are at add manager page</h2>
+  <h2>Create Manager</h2>
   <p>Please fill every block before pressing the add button</p>
 </div>
-
+    <div class="k-form">
     <div class="form-control">
         <label for="email">Email</label>
         <input type="text" v-model="email" name="email" required>
     </div>
     <div class="form-control">
-            <label for="password">password</label>
+            <label for="password">Password</label>
              <input type="text" v-model="password" name="password" required />
     </div>
     <div class="form-control">
@@ -21,6 +21,7 @@
              <input type="text" v-model="managerLName" name="managerLName" required/>
     </div>
     <input type="button" value="Add Manager" v-on:click="submit" class="btn btn-block"/>
+    </div>
 </template>
 
 
@@ -75,21 +76,22 @@ export default{
 <style scope>
 .h-form{
   margin-left: 50px;
-  margin-bottom: 30px;
-}
-.add-form {
-  margin-bottom: 40px;
 }
 .form-control {
   margin-left: 50px;
-  margin-bottom: 10px;
-  margin-right: 600px
+  margin-right: 0px;
 }
 .form-control label {
   display: block;
+  font-weight: bold;
+}
+.k-form{
+  background: #f2f2f2;
+  width: 100;
+  padding: 30px;
 }
 .form-control input {
-  width: 100%;
+  width: 50%;
   height: 40px;
   margin: 5px;
   padding: 3px 7px;

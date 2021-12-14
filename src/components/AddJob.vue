@@ -58,32 +58,31 @@ export default {
 
 </script>
 <style scoped>
+h2{
+    margin: 20px;
+    text-align: left;
+}
 .add-form {
   margin-bottom: 40px;
+  margin-right: 10px;
 }
 .form-control {
-  margin: 20px 0;
+  margin: 0px 0;
 }
 .form-control label {
   display: block;
+  font-weight: bold;
+}
+div {
+  background-color: #f2f2f2;
+  width: 525px;
+  padding: 10px;
 }
 .form-control input {
   width: 100%;
   height: 40px;
-  margin: 5px;
+  margin: 0px;
   padding: 3px 7px;
   font-size: 17px;
-}
-.form-control-check {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.form-control-check label {
-  flex: 1;
-}
-.form-control-check input {
-  flex: 2;
-  height: 20px;
 }
 </style>

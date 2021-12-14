@@ -1,4 +1,5 @@
 <template>
+    <h2>Register Model</h2>
    <form @submit="onSubmit" class="add-form"> 
         <div class="form-control">
             <label for="FirstName">Models firstname</label>
@@ -165,6 +166,10 @@ export default {
 </script>
 
 <style scoped>
+h2{
+    margin: 20px;
+    text-align: left;
+}
 .add-form {
   margin-bottom: 40px;
   margin-right: 10px;
