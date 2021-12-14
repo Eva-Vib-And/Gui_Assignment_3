@@ -8,7 +8,7 @@
 </div>  
    <!-- Side navigation -->
 <div class="sidenav">
-  <a router-link to="/addExpenses">Add Expense to Job</a>
+  <a ><router-link to="/addExpenses">Add Expense to Job</router-link></a>
     <a> <router-link to="/seeJobs">See Jobs</router-link></a>
 </div>
 </template>

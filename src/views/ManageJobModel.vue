@@ -1,8 +1,8 @@
 <template>
-    <p>Add or remove model to a desired job</p>
-    <p>This function is sadly out of order in the moment :( </p>
-   <!-- <p v-for="job in jobs" :key="job.efjobId"> {{job.jobModels}}</p> tester-->
-    <table>
+    <p>Here you can add or remove model to a desired job</p>
+    <p>This function is sadly out of order in the moment :( see code behind </p>
+   <!-- code breaks so its out commented so an error message can be shown-->
+   <!-- <table>
         <thead>
             <tr>
                 <th>Customer</th>
@@ -37,7 +37,7 @@
                 </tr>
             </table>
         </td>
-    </table>
+    </table> -->
 </template>
 
 <script>
@@ -159,3 +159,8 @@ export default{
 }
 
 </script>
+<style scope>
+p {
+    margin: 20px;
+}
+</style>

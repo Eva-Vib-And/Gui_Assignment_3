@@ -1,5 +1,5 @@
 <template>
-    <p>add expenses</p>
+    <h2>Add expenses</h2>
     <div class="form-control">
             <label for="text">Expense: </label>
              <input type="text" v-model="text" name="text" required />
@@ -12,7 +12,8 @@
             <label for="date">Date(YYYY-MM-DD):</label>
              <input type="text" v-model="date" name="date" required/>
     </div>
-    <div>
+    <div class="option-form">
+        <label for="Job">Select Job: </label>
     <select v-model="jobId">
         <option v-for="job in jobs" v-bind:key="job.efJobId" v-bind:value="job.efJobId">
             {{job.customer}}
@@ -21,7 +22,7 @@
     </div>
     
 
-    <button type="button" value="Add Expense" v-on:click="addExpense">Add new expenses</button>
+    <button type="button" value="Add Expense" v-on:click="addExpense" class="btn btn-block">Add New Expenses</button>
 
 
 </template>
@@ -83,3 +84,28 @@ export default{
     }
 }
 </script>
+<style scope>
+.option-form {
+ margin-left: 50px;
+ font-size: 20px;
+ margin-bottom: 20px;
+}
+.add-form {
+  margin-bottom: 40px;
+}
+.form-control {
+  margin-left: 50px;
+  margin-bottom: 10px;
+  margin-right: 600px
+}
+.form-control label {
+  display: block;
+}
+.form-control input {
+  width: 100%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+}
+</style>

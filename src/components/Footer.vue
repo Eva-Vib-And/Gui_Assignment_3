@@ -1,7 +1,7 @@
 <template>
     <footer>
         <p>CopyRight ....</p>
-        <router-link to='/'>Go back to Home</router-link>
+        <router-link to='/'>Go back to Login</router-link>
     </footer>
 </template>
 <style scoped>

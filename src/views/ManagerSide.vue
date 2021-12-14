@@ -1,8 +1,8 @@
 <template>
 <!-- Page content -->
 <div class="main">
-  <h1>Der er mange mangler i programmet</h1>
- <h3>You are at managerside</h3>
+  <h1>You are at manager frontpage</h1>
+ <p>To navigate to teh different functions, please use the navbar left of the screen. <br>You will return to the managers frontpage again when pressing 'Manager page' in the topbar </p>
     
 </div>
     <!-- Side navigation -->
@@ -11,7 +11,7 @@
   </a>
    <a ><router-link to="/createmanager">Add Manager</router-link></a>
     <a> <router-link to="/addnewjob">Add New Job</router-link></a>
-  <a> <router-link to="/manage_J_M"> Add Model to Job </router-link></a>
+  <a> <router-link to="/manage_J_M"> Add/Delete Model to Job </router-link></a>
     <a> <router-link to="/seeJobs">See Jobs</router-link></a>
     <a> <router-link to="/seeModels">See Models </router-link></a>
 </div>
