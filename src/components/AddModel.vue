@@ -167,17 +167,24 @@ export default {
 <style scoped>
 .add-form {
   margin-bottom: 40px;
+  margin-right: 10px;
 }
 .form-control {
   margin: 0px 0;
 }
 .form-control label {
   display: block;
+  font-weight: bold;
+}
+div {
+  background-color: #f2f2f2;
+  width: 525px;
+  padding: 10px;
 }
 .form-control input {
   width: 100%;
   height: 40px;
-  margin: 5px;
+  margin: 0px;
   padding: 3px 7px;
   font-size: 17px;
 }
