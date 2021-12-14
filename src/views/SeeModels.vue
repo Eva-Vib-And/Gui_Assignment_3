@@ -1,6 +1,6 @@
 <template>
 
-        <h1>List of Models</h1>
+        <h2>List of Models</h2>
     <table>
         <tr>
             <th>FirstName</th>
@@ -55,10 +55,9 @@ export default {
 </script>
 
 <style scoped>
-h1{
-    color: black;
+h2{
+    margin: 20px;
     text-align: center;
-    margin-right: 100px;
 }
 table, td, th {
   border: 1px solid black;

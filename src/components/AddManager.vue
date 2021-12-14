@@ -1,15 +1,14 @@
 <template>
-<div class="h-form"> 
-  <h2>You are at add manager page</h2>
+  <h2>Create Manager</h2>
   <p>Please fill every block before pressing the add button</p>
-</div>
-
+<div class="k-form">
+<div class="h-form"> 
     <div class="form-control">
         <label for="email">Email</label>
         <input type="text" v-model="email" name="email" required>
     </div>
     <div class="form-control">
-            <label for="password">password</label>
+            <label for="password">Password</label>
              <input type="text" v-model="password" name="password" required />
     </div>
     <div class="form-control">
@@ -20,7 +19,9 @@
             <label for="managerLName">LastName</label>
              <input type="text" v-model="managerLName" name="managerLName" required/>
     </div>
+    </div>
     <input type="button" value="Add Manager" v-on:click="submit" class="btn btn-block"/>
+   </div>
 </template>
 
 
@@ -73,25 +74,27 @@ export default{
 
 </script>
 <style scope>
-.h-form{
-  margin-left: 50px;
-  margin-bottom: 30px;
-}
-.add-form {
-  margin-bottom: 40px;
-}
 .form-control {
-  margin-left: 50px;
-  margin-bottom: 10px;
-  margin-right: 600px
+  margin-left: 20px;
+  margin-right: 0px;
 }
 .form-control label {
   display: block;
+  font-weight: bold;
+}
+.h-form{
+  background: #f2f2f2;
+  width: 600px;
+  height: 400px;
+  padding: 30px;
+}
+.k-form{
+  height: 500px;
 }
 .form-control input {
   width: 100%;
   height: 40px;
-  margin: 5px;
+  margin: 100px;
   padding: 3px 7px;
   font-size: 17px;
 }
